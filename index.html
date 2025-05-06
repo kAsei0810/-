@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>りな姉バースデーパーティー会場</title>
+  <style>
+    #secretImage {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function showImageIfPasswordCorrect() {
+      const correctPassword = "6483"; // 正しいパスワード
+      const input = document.getElementById("password").value;
+      const imageContainer = document.getElementById("imageContainer");
+
+      if (input === correctPassword) {
+        imageContainer.style.display = "block";
+      } else {
+        alert("数字が違うかもしれねぇなぁ");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>りな姉バースデーパーティー会場</h1>
+  <p>まぁ、まずは誕生日おめでとう。<br>とりあえず下を見てくれよ。</p>
+  <input type="password" id="password">
+  <button onclick="showImageIfPasswordCorrect()">送信</button>
+
+  <div id="imageContainer" style="display:none;">
+    <p>画像を右クリック（スマホなら長押し）して保存できます。</p>
+    <img id="secretImage" src="BirthdayCard.png" alt="秘密の画像" width="300">
+    <br>
+    <a href="BirthdayCard.png" download>画像をダウンロードする</a> <!-- ダウンロードリンクも追加 -->
+  </div>
+</body>
+</html>
+
